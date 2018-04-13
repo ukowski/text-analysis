@@ -1,11 +1,11 @@
-import src.FileContent;
-import src.StatisticalAnalysis;
-import src.View;
+import src.dao.FileContent;
+import src.controller.StatisticalAnalysis;
+import src.view.AppView;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.ArrayList;
 
-public class Application {
+public class App {
     
     public static void main(String[] args) {
 
@@ -26,22 +26,22 @@ public class Application {
         endTime = System.currentTimeMillis();
         
         benchmarkTime = (endTime - startTime)/1000.0;
-        View.printBenchmarkTime(benchmarkTime);
+        AppView.printBenchmarkTime(benchmarkTime);
     }
 
     public static void printFileInformation(FileContent fc) {
 
-        View.printFileName(getFilename(fc));
-        View.printCharCount(getCharSize(fc));
-        View.printWordsCount(getWordsSize(fc));
-        View.printDictSize(getDictSize(fc));
-        View.printWordCount("love", getCountOf(fc, "love"));
-        View.printWordCount("hate", getCountOf(fc, "hate"));
-        View.printWordCount("music", getCountOf(fc, "music"));
-        View.printVowelsPercentage(getVowelsPercentage(fc));
-        View.printMostUsedWords(getMostUsedWords(fc));
-        View.printTwoElementsRatio("a", "e", getTwoElementsRatio("a", "e", fc));
-        View.printAllElementsRatio(getRatioOfAllChars(fc)); 
+        AppView.printFileName(getFilename(fc));
+        AppView.printCharCount(getCharSize(fc));
+        AppView.printWordsCount(getWordsSize(fc));
+        AppView.printDictSize(getDictSize(fc));
+        AppView.printWordCount("love", getCountOf(fc, "love"));
+        AppView.printWordCount("hate", getCountOf(fc, "hate"));
+        AppView.printWordCount("music", getCountOf(fc, "music"));
+        AppView.printVowelsPercentage(getVowelsPercentage(fc));
+        AppView.printMostUsedWords(getMostUsedWords(fc));
+        AppView.printTwoElementsRatio("a", "e", getTwoElementsRatio("a", "e", fc));
+        AppView.printAllElementsRatio(getRatioOfAllChars(fc));
     }
 
     public static String getFilename(FileContent fc) {

@@ -1,16 +1,19 @@
-package src;
+package src.iterators;
+
+import src.dao.FileContent;
 
 import java.util.Iterator;
 import java.util.ArrayList;
 
-public class WordIterator implements Iterator {
-    
+public class CharIterator implements Iterator {
+
     private int index;
     private ArrayList<String> list;
 
-    public WordIterator(FileContent fileContent) {
+    public CharIterator(FileContent fileContent) {
+
         this.index = 0;
-        this.list = fileContent.getWordsList();
+        this.list = fileContent.getCharsList();
     }
 
     public boolean hasNext() {
@@ -23,7 +26,7 @@ public class WordIterator implements Iterator {
 
     public String next() {
         if (hasNext()) {
-            return this.list.get(index++);
+            return this.list.get(index++).toString();
         }
         return null;
     }

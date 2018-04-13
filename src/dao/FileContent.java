@@ -1,4 +1,7 @@
-package src;
+package src.dao;
+
+import src.iterators.CharIterator;
+import src.iterators.WordIterator;
 
 import java.util.ArrayList;
 import java.util.Scanner;

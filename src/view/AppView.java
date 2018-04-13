@@ -1,9 +1,9 @@
-package src;
+package src.view;
 
 import java.util.ArrayList;
 import java.util.Set;
 
-public class View {
+public class AppView {
     public static void printFileName(String string) {
 
         System.out.println("==" + string + "==");

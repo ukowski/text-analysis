@@ -1,4 +1,4 @@
-package src;
+package src.controller;
 
 import java.util.HashMap;
 import java.util.Set;
